@@ -9,6 +9,10 @@ compton.conf -> ~/.config/compton.conf -- not necessary
 i3status -> ~/.config/i3status/config
 
 
+
+
+
+
 Dependencies (incomplete, simply what I can remember):
 
 i3-gaps        -- the window manager
@@ -22,3 +26,5 @@ urxvt-perls    -- for urxvt plugins
 ttf-hack       -- the font used by urxvt
 
 feh            -- for setting the background
+
+tmux           -- for the dropdown terminal, but not really required
