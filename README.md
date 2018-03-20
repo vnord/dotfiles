@@ -3,6 +3,7 @@ These dotfiles expect to be symlinked to the following locations (make sure to b
 Xresources -> ~/.Xresources
 i3conf -> ~/.config/i3/config
 compton.conf -> ~/.config/compton.conf -- not necessary
+i3status -> ~/.config/i3status/config
 
 Dependencies (incomplete, simply what I can remember):
 
