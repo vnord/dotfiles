@@ -1,0 +1,109 @@
+URxvt.background:	[100]#1E272B
+URxvt.foreground:	#DEDEDE
+URxvt.font: xft:Hack:size=10
+URxvt.boldFont:		xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
+URxvt.scrollBar:	false
+URxvt.saveLines:	65535
+URxvt.perl-ext-common: keyboard-select,url-select,clipboard
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+Xft*dpi:       96
+Xft*antialias: True
+Xft*hinting:   Full
+URxvt.keysym.KP_Add:    +
+URxvt.keysym.KP_Subtract: -
+URxvt.keysym.KP_Multiply: *
+URxvt.keysym.KP_Divide  : /
+URxvt.keysym.KP_Decimal : .
+URxvt.keysym.KP_Separator : ,
+URxvt.keysym.KP_1:      1
+URxvt.keysym.KP_2:      2
+URxvt.keysym.KP_3:      3
+URxvt.keysym.KP_4:      4
+URxvt.keysym.KP_5:      5
+URxvt.keysym.KP_6:      6
+URxvt.keysym.KP_7:      7
+URxvt.keysym.KP_8:      8
+URxvt.keysym.KP_9:      9
+URxvt.keysym.KP_0:      0
+
+/* ! special */
+/* *.foreground:   #c5c8c6 */
+/* *.background:   #1d1f21 */
+/* *.cursorColor:  #c5c8c6 */
+
+/* ! black */
+/* *.color0:       #282a2e */
+/* *.color8:       #373b41 */
+
+/* ! red */
+/* *.color1:       #a54242 */
+/* *.color9:       #cc6666 */
+
+/* ! green */
+/* *.color2:       #8c9440 */
+/* *.color10:      #b5bd68 */
+
+/* ! yellow */
+/* *.color3:       #de935f */
+/* *.color11:      #f0c674 */
+
+/* ! blue */
+/* *.color4:       #5f819d */
+/* *.color12:      #81a2be */
+
+/* ! magenta */
+/* *.color5:       #85678f */
+/* *.color13:      #b294bb */
+
+/* ! cyan */
+/* *.color6:       #5e8d87 */
+/* *.color14:      #8abeb7 */
+
+/* ! white */
+/* *.color7:       #707880 */
+/* *.color15:      #c5c8c6 */
+
+
+
+! special
+*.foreground:   #ffffff
+*.background:   #000000
+*.cursorColor:  #ffffff
+
+! black
+*.color0:       #646e5b
+*.color8:       #88927e
+
+! red
+*.color1:       #db7464
+*.color9:       #dba08f
+
+! green
+*.color2:       #a7e160
+*.color10:      #bde18b
+
+! yellow
+*.color3:       #dbd560
+*.color11:      #dbda8b
+
+! blue
+*.color4:       #69b2d6
+*.color12:      #95a9d6
+
+! magenta
+*.color5:       #a073d6
+*.color13:      #b59fd6
+
+! cyan
+*.color6:       #69e1d3
+*.color14:      #95e1d2
+
+! white
+*.color7:       #9ea894
+*.color15:      #c9d0c2
+
