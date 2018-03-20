@@ -2,11 +2,12 @@ These dotfiles expect to be symlinked to the following locations (make sure to b
 
 Xresources -> ~/.Xresources
 i3conf -> ~/.config/i3/config
-compton.conf -> ~/.config/compton.conf
+compton.conf -> ~/.config/compton.conf -- not necessary
 
 Dependencies (incomplete, simply what I can remember):
 
-i3-gaps
-compton (for window composition, will run without it)
-rxvt-unicode
-urxvt-perls (for urxvt plugins)
+i3-gaps        -- the window manager
+compton        -- window compositor
+rxvt-unicode   -- the best terminal
+urxvt-perls    -- for urxvt plugins
+ttf-hack       -- the font used by urxvt
