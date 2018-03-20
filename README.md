@@ -11,3 +11,4 @@ compton        -- window compositor
 rxvt-unicode   -- the best terminal
 urxvt-perls    -- for urxvt plugins
 ttf-hack       -- the font used by urxvt
+feh            -- for setting the background
