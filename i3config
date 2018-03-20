@@ -34,7 +34,7 @@
 exec --no-startup-id mopidy
 exec --no-startup-id "compton --config ~/.config/compton.conf"
 exec --no-startup-id setxkbmap -option caps:escape
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/1513696017770.jpg
+exec --no-startup-id feh --bg-scale ~/.dotfiles/bg.jpg
 exec --no-startup-id albert
 # exec --no-startup-id "feh --bg-scale ~/Pictures/WSuBGxk.jpg"
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
