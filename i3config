@@ -8,9 +8,8 @@ exec --no-startup-id mopidy
 exec --no-startup-id "compton --config ~/.dotfiles/compton.conf"
 exec --no-startup-id setxkbmap -option caps:escape # swap caps and escape
 exec --no-startup-id setxkbmap us
-exec --no-startup-id feh --bg-scale ~/.dotfiles/bg.jpg
 exec --no-startup-id albert
-# exec --no-startup-id "feh --bg-scale ~/Pictures/WSuBGxk.jpg"
+exec --no-startup-id sh ~/.dotfiles/scripts/bg_set.sh
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Window appeareance configuration
