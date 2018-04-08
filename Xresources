@@ -1,5 +1,5 @@
-URxvt.background:	[100]#1E272B
-URxvt.foreground:	#DEDEDE
+/* URxvt.background:	[100]#1E272B */
+/* URxvt.foreground:	#DEDEDE */
 URxvt.font: xft:Hack:size=10
 URxvt.boldFont:		xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
 URxvt.scrollBar:	false
@@ -31,79 +31,40 @@ URxvt.keysym.KP_8:      8
 URxvt.keysym.KP_9:      9
 URxvt.keysym.KP_0:      0
 
-/* ! special */
-/* *.foreground:   #c5c8c6 */
-/* *.background:   #1d1f21 */
-/* *.cursorColor:  #c5c8c6 */
-
-/* ! black */
-/* *.color0:       #282a2e */
-/* *.color8:       #373b41 */
-
-/* ! red */
-/* *.color1:       #a54242 */
-/* *.color9:       #cc6666 */
-
-/* ! green */
-/* *.color2:       #8c9440 */
-/* *.color10:      #b5bd68 */
-
-/* ! yellow */
-/* *.color3:       #de935f */
-/* *.color11:      #f0c674 */
-
-/* ! blue */
-/* *.color4:       #5f819d */
-/* *.color12:      #81a2be */
-
-/* ! magenta */
-/* *.color5:       #85678f */
-/* *.color13:      #b294bb */
-
-/* ! cyan */
-/* *.color6:       #5e8d87 */
-/* *.color14:      #8abeb7 */
-
-/* ! white */
-/* *.color7:       #707880 */
-/* *.color15:      #c5c8c6 */
-
-
 
 ! special
-*.foreground:   #ffffff
-*.background:   #000000
-*.cursorColor:  #ffffff
+*.foreground:   #f1ebeb
+*.background:   #272822
+*.cursorColor:  #f1ebeb
 
 ! black
-*.color0:       #646e5b
-*.color8:       #88927e
+*.color0:       #48483e
+*.color8:       #76715e
 
 ! red
-*.color1:       #db7464
-*.color9:       #dba08f
+*.color1:       #dc2566
+*.color9:       #fa2772
 
 ! green
-*.color2:       #a7e160
-*.color10:      #bde18b
+*.color2:       #8fc029
+*.color10:      #a7e22e
 
 ! yellow
-*.color3:       #dbd560
-*.color11:      #dbda8b
+*.color3:       #d4c96e
+*.color11:      #e7db75
 
 ! blue
-*.color4:       #69b2d6
-*.color12:      #95a9d6
+*.color4:       #55bcce
+*.color12:      #66d9ee
 
 ! magenta
-*.color5:       #a073d6
-*.color13:      #b59fd6
+*.color5:       #9358fe
+*.color13:      #ae82ff
 
 ! cyan
-*.color6:       #69e1d3
-*.color14:      #95e1d2
+*.color6:       #56b7a5
+*.color14:      #66efd5
 
 ! white
-*.color7:       #9ea894
-*.color15:      #c9d0c2
-
+*.color7:       #acada1
+*.color15:      #cfd0c2

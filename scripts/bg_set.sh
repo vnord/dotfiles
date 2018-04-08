@@ -14,7 +14,7 @@ echo $OLD_BG_EXTENSION
 if [ $# -eq 0 ]
 then
     echo setting default background
-    feh --bg-scale $WALLPAPER_DIR/bg.*
+    feh --bg-fill $WALLPAPER_DIR/bg.*
 elif [ $# -eq 1 ]
 then
     echo setting custom bg
@@ -25,5 +25,5 @@ then
     NEW_BG_FILENAME="$1"
     NEW_BG_EXTENSION="${NEW_BG_FILENAME##*.}"
     cp $NEW_BG_FILENAME $WALLPAPER_DIR/bg.$NEW_BG_EXTENSION
-    feh --bg-scale $WALLPAPER_DIR/bg.$NEW_BG_EXTENSION
+    feh --bg-fill $WALLPAPER_DIR/bg.$NEW_BG_EXTENSION
 fi
