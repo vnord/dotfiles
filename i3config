@@ -12,6 +12,9 @@ exec --no-startup-id albert
 exec --no-startup-id sh ~/.dotfiles/scripts/bg_set.sh
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# activates mousebuttons. Press shift-num lock to activate
+exec --no-startup-id setxkbmap -option keypad:pointerkeys
+
 # Window appeareance configuration
 
 gaps inner 6
