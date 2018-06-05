@@ -65,8 +65,8 @@ disk "/" {
 }
 
 volume master {
-	format = " %volume"
-	format_muted = " (%volume)"
+	format = "vol: %volume"
+	format_muted = "vol: (%volume)"
 	device = "pulse:0"
 }
 
