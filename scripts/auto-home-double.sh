@@ -9,5 +9,6 @@ then
     xrandr --output DP-1 --primary
     xrandr --output DVI-D-0 --auto
     xrandr --output DVI-D-0 --right-of DP-1
+    xrandr --output DVI-D-0 --rotate left
     sh $HOME/.dotfiles/scripts/bg_set.sh
 fi
