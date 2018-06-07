@@ -18,6 +18,9 @@ exec --no-startup-id sh ~/.dotfiles/scripts/swap_alt_super.sh
 # activates mousebuttons. Press shift-num lock to activate
 exec --no-startup-id setxkbmap -option keypad:pointerkeys
 
+# lets use a good monitor if we have one
+exec --no-startup-id sh ~/.dotfiles/scripts/auto-rise.sh
+
 # Window appeareance configuration
 
 gaps inner 6
