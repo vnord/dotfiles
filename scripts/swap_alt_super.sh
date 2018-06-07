@@ -4,5 +4,5 @@ THISHOST=$(hostname -s)
 
 if [ "$THISHOST" = "eruditorum" ]
 then
-    setxkbmap -option alwtin:swap_alt_win
+    setxkbmap -option altwin:swap_alt_win
 fi
