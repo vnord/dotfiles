@@ -21,6 +21,9 @@ exec --no-startup-id setxkbmap -option keypad:pointerkeys
 # lets use a good monitor if we have one
 exec --no-startup-id sh ~/.dotfiles/scripts/auto-rise.sh
 
+# if we're at home, we're putting our nice monitors to good use
+exec --no-startup-id sh ~/.dotfiles/scripts/auto-home-double.sh
+
 # Window appeareance configuration
 
 gaps inner 6
