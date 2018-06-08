@@ -2,8 +2,14 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# startup programs
 
+# swap the super and alt keys if we are on the eruditorum host
+# we do this first in hacky manner, it really should be later
+# but we clear all keybinds in the script in order to not double
+# swap
+exec --no-startup-id sh ~/.dotfiles/scripts/swap_alt_super.sh
+
+# startup programs
 exec --no-startup-id mopidy
 exec --no-startup-id "compton --config ~/.dotfiles/compton.conf"
 exec --no-startup-id setxkbmap -option caps:escape # swap caps and escape
@@ -12,14 +18,15 @@ exec --no-startup-id albert
 exec --no-startup-id sh ~/.dotfiles/scripts/bg_set.sh
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# swap the super and alt keys if we are on the eruditorum host
-exec --no-startup-id sh ~/.dotfiles/scripts/swap_alt_super.sh
 
 # activates mousebuttons. Press shift-num lock to activate
 exec --no-startup-id setxkbmap -option keypad:pointerkeys
 
 # lets use a good monitor if we have one
 exec --no-startup-id sh ~/.dotfiles/scripts/auto-rise.sh
+
+# if we're at home, we're putting our nice monitors to good use
+exec --no-startup-id sh ~/.dotfiles/scripts/auto-home-double.sh
 
 # Window appeareance configuration
 
@@ -102,6 +109,13 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+# move current workspace between monitors
+bindsym $mod+Control+Left move workspace to output left
+bindsym $mod+Control+h move workspace to output left
+bindsym $mod+Control+Right move workspace to output right
+bindsym $mod+Control+l move workspace to output right
+
 
 # split in horizontal orientation
 bindsym $mod+minus split h
