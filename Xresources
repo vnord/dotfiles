@@ -4,6 +4,7 @@ URxvt.font: xft:Hack:size=10
 URxvt.boldFont:		xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
 URxvt.scrollBar:	false
 URxvt.saveLines:	65535
+/* URxvt.perl-ext-common: default,keyboard-select,url-select,clipboard,matcher */
 URxvt.perl-ext-common: default,keyboard-select,url-select,clipboard,matcher
 /* URxvt.perl-ext: keyboard-select,url-select,clipboard,default,matcher */
 URxvt.url-select.launcher: /usr/bin/chromium
@@ -16,9 +17,9 @@ URxvt.keysym.M-v:   perl:clipboard:paste
 URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 URxvt.perl-lib: /usr/lib/urxvt/perl/
 URxvt.matcher.button:   1
-URxvt.urlLauncher: /usr/bin/chromium
-URxvt.url-launcher: /usr/bin/chromium
-URxvt*matcher.pattern.1:   \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+/* URxvt.urlLauncher: /usr/bin/chromium */
+/* URxvt.url-launcher: /usr/bin/chromium */
+URxvt.matcher.pattern.1:   \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 Xft*dpi:       96
 Xft*antialias: True
 Xft*hinting:   Full
