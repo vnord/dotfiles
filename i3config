@@ -69,7 +69,7 @@ exec --no-startup-id urxvt -name dropdown -e tmux
 
 bindsym $mod+u	[instance="dropdown"] scratchpad show; move position center
 
-# lock the screen5
+# lock the screen
 bindsym $mod+Delete exec --no-startup-id "i3lock -c 000000 && systemctl suspend"
 bindsym $mod+Shift+Delete exec --no-startup-id "i3lock -c 000000"
 
