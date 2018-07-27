@@ -260,4 +260,4 @@ bindsym $mod+c exec --no-startup-id sh ~/.dotfiles/scripts/toggle_layout.sh
 
 # Window specific rules
 
-for_window [class="RuneLite"] floating enable, move container to workspace 10
+# for_window [class="RuneLite"] floating enable, move container to workspace 10
