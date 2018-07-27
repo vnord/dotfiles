@@ -1,0 +1,9 @@
+Mon Jul 16 10:10:31 CEST 2018
+-Created this file/system
+
+Mon Jul 16 15:37:43 CEST 2018
+-Learned to use tr in order to delete (or replace) unwanted characters
+
+Mon Jul 16 15:39:31 CEST 2018
+-Learned that HTML tables are outdated, and that tags can't be split onto
+multiple rows
