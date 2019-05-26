@@ -75,5 +75,5 @@ URxvt.keysym.KP_0:      0
 *.color14:      #66efd5
 
 ! white
-*.color7:       #acada1
+*.color7:       #ffffff
 *.color15:      #cfd0c2

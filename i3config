@@ -4,16 +4,23 @@
 
 
 # Let's get some sane keyboard functionality
-exec --no-startup-id sh ~/.dotfiles/scripts/home_keyboard.sh
+# exec --no-startup-id sh ~/.dotfiles/scripts/home_keyboard.sh
 exec --no-startup-id setxkbmap us
 
 # startup programs
 exec --no-startup-id mopidy
+# exec --no-startup-id mpd
 exec --no-startup-id "compton --config ~/.dotfiles/compton.conf"
 exec --no-startup-id setxkbmap -option caps:escape # swap caps and escape
 exec --no-startup-id albert
 exec --no-startup-id sh ~/.dotfiles/scripts/bg_set.sh
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+exec --no-startup-id signal-desktop --start-in-tray
+exec --no-startup-id telegram-desktop -startintray
+
+# for_window [class="Signal"] move container to workspace 10
+# for_window [class="Telelegram"] move container to workspace 10
 
 
 # activates mousebuttons. Press shift-num lock to activate
@@ -30,11 +37,16 @@ exec --no-startup-id sh ~/.dotfiles/scripts/auto-home-double.sh
 gaps inner 6
 gaps outer 4
 
+bindsym $mod+g gaps outer current toggle 60
+
+
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
 
 set $mod Mod4
 # set $mod Mod1
+
+bindsym $mod+o border toggle
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -55,7 +67,10 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec kitty
+
+# start a terminal at same path as current window
+bindsym $mod+Control+Return exec kitty -d `xcwd`
 
 # scratchpad
 for_window [instance="dropdown"] floating enable
@@ -67,8 +82,8 @@ exec --no-startup-id urxvt -name dropdown -e tmux
 bindsym $mod+u	[instance="dropdown"] scratchpad show; move position center
 
 # lock the screen
-bindsym $mod+Delete exec --no-startup-id "i3lock -c 000000 && systemctl suspend"
-bindsym $mod+Shift+Delete exec --no-startup-id "i3lock -c 000000"
+bindsym $mod+Delete exec --no-startup-id "systemctl suspend"
+bindsym $mod+Shift+Delete exec --no-startup-id "xset dpms force standby"
 
 # kill focused window
 bindsym $mod+Shift+c kill
@@ -84,10 +99,10 @@ bindsym $mod+p exec --no-startup-id albert toggle
 # bindsym $mod+p exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+h focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -211,20 +226,22 @@ bindsym $mod+r mode "resize"
 	font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
     	font pango:DejaVu Sans Mono 9
 	# status_command polybar example
-        status_command i3status
-	# status_command i3blocks
+    # status_command i3status
+    # status_command sh ~/.i3status.sh
+    # status_command i3pystatus -c ~/.config/i3pystatus/config
+	status_command i3blocks
 }
 
 # Pulse Audio controls
 # increase sound volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym $mod+Control+k exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.usb-Focusrite_Saffire_6USB2.0-00.analog-surround-40 +5%
+bindsym $mod+Control+k exec --no-startup-id pactl set-sink-volume +5%
 #decrease sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% 
-bindsym $mod+Control+j exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.usb-Focusrite_Saffire_6USB2.0-00.analog-surround-40 -5% 
+bindsym $mod+Control+j exec --no-startup-id pactl set-sink-volume -5%
 # mute sound
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
-bindsym $mod+m exec --no-startup-id pactl set-sink-mute 0 toggle 
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute alsa_output.usb-Focusrite_Saffire_6USB2.0-00.analog-surround-40 toggle 
+bindsym $mod+m exec --no-startup-id pactl set-sink-mute alsa_output.usb-Focusrite_Saffire_6USB2.0-00.analog-surround-40 toggle 
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -234,7 +251,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 # bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
-bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPlay "exec --no-startup-id playerctl play-pause || mpc toggle"
 bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
 bindsym $mod+Shift+p exec --no-startup-id  playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
